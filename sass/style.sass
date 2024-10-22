@@ -1,0 +1,197 @@
+@import "_normalizes.scss"
+@import "_resets.scss"
+
+
+
+// colors
+
+
+$main-color: #DDEEDB
+$secondary-color: #043800
+$accent-color: #B0F1AB
+
+// mixin
+@mixin window-style
+    background-color: rgba(221,238,219,0.3)
+    backdrop-filter: blur(4px)
+    border-radius: 12px
+    box-shadow: -1px 7px 25px 0px rgba(4, 27, 2, 1)
+    box-shadow: -1px 7px 25px 0px rgba(221, 238, 219, 0.5) inset
+
+@mixin wrap-setting
+    background-repeat: no-repeat
+    background-position: center
+    height: 800px
+    width: 1440px
+    margin: 0 auto
+    
+
+body
+    font-family: "Cormorant"
+    font-weight: 700
+
+a
+    text-decoration: none
+
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+
+.wrap
+    &__hero
+        @include wrap-setting
+        background-image: url(../img/hero-img.png)
+    &__about
+        @include wrap-setting
+        background-image: url(../img/about-img.png)
+    &__events
+        @include wrap-setting
+        background-image: url(../img/events-img.png)
+        height: 810px
+
+
+
+
+
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        margin-right: 64px
+        &:last-child
+            margin-right: 0px
+        a
+            color: $main-color
+            font-size: 24px
+
+.page-hero
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: end
+        margin-bottom: 192px
+        height: 77px
+    
+    &__btn
+        background-color: $main-color
+    &__btn-item
+        font-size: 24px
+        color: $secondary-color
+
+    &__content-container
+        text-align: center
+
+    &__title
+        font-size: 128px
+        color: $main-color
+        &-text
+            font-size: 48px
+            color: $main-color
+            margin-bottom: 156px
+    &__arrow
+        background-color: $main-color
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center   
+
+.page-about
+    &__title
+        font-size: 48px
+        color: $main-color
+        &-container
+            height: 96px
+            display: flex
+            justify-content: center
+            align-items: end
+            margin-bottom: 24px
+
+    &__window-box
+        @include window-style
+        display: flex
+        justify-content: space-around
+        align-items: center
+        height: 600px
+
+
+.right-content
+    display: flex 
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 358px
+    height: 492px
+    background-color: $main-color
+    border-radius: 12px
+    box-shadow: -1px 7px 25px 0px rgba(4, 27, 2, 0.2)
+    &__image
+        margin-bottom: 12px
+    &__title
+        color: $secondary-color
+        font-size: 20px
+        margin-bottom: 12px
+    &__text
+        position: relative
+        text-align: center
+        width: 270px
+        height: 128px
+        background-color: rgba(10, 70,5 ,0.5 )
+        border-radius: 12px
+        font-size: 20px
+        color: $main-color
+        p
+            position: absolute
+            top: 12px
+
+.left-content
+    width: 554px
+    &__text
+    font-size: 28px
+    color: $main-color
+    font-weight: 600
+    span
+        color: $accent-color
+
+
+
+.content-container
+    &__title
+        font-size: 48px
+        color: $main-color
+        &-container
+            height: 96px
+            display: flex
+            justify-content: center
+            align-items: end
+            margin-bottom: 72px
+
+.events-left-content
+    @include window-style
+    max-width: 456px
+    height: 548px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.events-box
+    margin-bottom: 12px
+    &__title
+        font-size: 24px
+        color: #B0F1AB
+        margin-bottom: 4px
+    &__date-1
+        font-size: 18px
+        color: $main-color
+        margin-bottom: 12px
+    &__date-2
+        font-size: 18px
+        color: $main-color
+    
